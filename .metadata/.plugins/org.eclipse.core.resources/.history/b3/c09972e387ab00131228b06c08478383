@@ -1,0 +1,33 @@
+package Controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import Model.Coin;
+import View.CoinFrame;
+import View.CoinOverview;
+import View.CoinProfile;
+
+public class CoinController {
+	
+	private CoinFrame view;
+	private Coin model;
+	private CoinProfile cp;
+	private CoinOverview co;
+	
+	
+	
+	public CoinController() {
+		
+		
+	}
+	
+	private class addCalculateButtonHandler implements ActionListener
+	{
+		public void actionPerformed(ActionEvent e) {
+			co.updateText(model.getCoin());
+//			co.updateText().getText();
+		}
+	}
+
+}

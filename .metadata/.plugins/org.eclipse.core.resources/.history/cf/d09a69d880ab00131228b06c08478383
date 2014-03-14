@@ -1,0 +1,24 @@
+package View;
+
+import javax.swing.JTable;
+
+public class CoinsTable {
+	
+	private JTable t;
+	
+	public CoinsTable() {
+		
+		String[] columnNames = {"Input",
+								"Pence",
+								"Description"};
+		}
+	
+	Object[][] data = {
+			{"4", "4", "Single Digit"}
+	}
+	
+	JTable table = new JTable()
+		t.addColumn(new TableColumn(modelColumn, 20,));
+	}
+
+}

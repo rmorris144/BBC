@@ -1,0 +1,25 @@
+package View;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class CoinFrame extends JFrame {
+	
+	private JPanel p;
+	private JButton b;
+	private JLabel l;
+	
+	public CoinFrame() {
+		
+		this.setTitle("BBC_Coin_Algorithm"); //set the title
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		l = new JLabel("Add Pence");
+		
+		b = new JButton("Calculate");
+		this.add(b);
+	}
+
+}

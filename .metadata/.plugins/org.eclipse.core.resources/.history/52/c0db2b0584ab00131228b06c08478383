@@ -1,0 +1,61 @@
+package View;
+
+import java.awt.Dimension;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
+
+public class CoinFrame extends JFrame {
+	
+	private JPanel p;
+	private JButton b;
+	private JLabel l;
+	private JTextField t;
+	private CoinOverview co;
+	
+	public CoinFrame() {
+		
+		this.setTitle("BBC_Coin_Algorithm"); //set the title
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JTabbedPane tabpane = new JTabbedPane(JTabbedPane.TOP);
+		tabpane.setPreferredSize(new Dimension(300, 200));
+		this.add(tabpane);
+		
+		co = new CoinOverview();
+		
+		tabpane.add("Overview", co);
+		
+		l = new JLabel("Add Pence"); 
+		
+		t = new JTextField(6);
+		t.setEditable(true);
+		t.setToolTipText("Add your coins here");
+		b = new JButton("Calculate");
+		this.add(b);
+		
+		p = new JPanel();
+		Box buttonm = Box.createVerticalBox();
+		p.add(l);
+		p.add(t);
+		p.add(b);
+		buttonm.add(p);
+	
+		
+		this.add(buttonm);
+		
+		this.setPreferredSize(new Dimension(500, 500));
+		this.pack();
+		this.setVisible(true);
+		
+	}
+
+	public static void main(String[] args) {
+		CoinFrame view = new CoinFrame();
+	}
+}

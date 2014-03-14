@@ -1,0 +1,20 @@
+package View;
+
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class CoinOverview extends JPanel {
+
+	private JTextArea ar;
+	
+	public CoinOverview() {
+		ar = new JTextArea();
+		ar.setColumns(40);
+		ar.setRows(20);
+		this.add(ar);
+	}
+	
+	public void updateText(int number) {
+		ar.append(" " + number);
+	}
+}
